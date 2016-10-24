@@ -17,3 +17,61 @@ body {
     padding-top: 15px;
   }
 }
+
+.budget-table {
+  margin: 30px 0;
+
+  thead {
+    tr {
+      th {
+        padding: 5px;
+
+        &.header-cell {
+          background-color: #cccccc;
+          border: 1px solid #222222;
+          color: #222222;
+          min-width: 300px;
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      th {
+        padding: 5px;
+
+        &.data-cell {
+          background-color: #ffffff;
+          border: 1px solid #222222;
+          color: #222222;
+          min-width: 300px;
+        }
+
+        &.edit-cell {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  tfoot {
+    tr {
+      th {
+        border: 1px solid #222222;
+        min-width: 300px;
+        padding: 5px;
+
+        &.total-label {
+          background-color: #222222;
+          color: #ffffff;
+        }
+
+        &.total-value {
+          background-color: #007700;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}

@@ -6725,8 +6725,40 @@ body {
   float: right;
   padding-top: 15px;
 }
-.gallery-image img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+.budget-table {
+  margin: 30px 0;
+}
+.budget-table thead tr th {
+  padding: 5px;
+}
+.budget-table thead tr th.header-cell {
+  background-color: #cccccc;
+  border: 1px solid #222222;
+  color: #222222;
+  min-width: 300px;
+}
+.budget-table tbody tr th {
+  padding: 5px;
+}
+.budget-table tbody tr th.data-cell {
+  background-color: #ffffff;
+  border: 1px solid #222222;
+  color: #222222;
+  min-width: 300px;
+}
+.budget-table tbody tr th.edit-cell {
+  cursor: pointer;
+}
+.budget-table tfoot tr th {
+  border: 1px solid #222222;
+  min-width: 300px;
+  padding: 5px;
+}
+.budget-table tfoot tr th.total-label {
+  background-color: #222222;
+  color: #ffffff;
+}
+.budget-table tfoot tr th.total-value {
+  background-color: #007700;
+  color: #ffffff;
 }
