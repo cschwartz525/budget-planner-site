@@ -6762,3 +6762,7 @@ body {
   background-color: #007700;
   color: #ffffff;
 }
+.budget-table .currency-cell {
+  padding-right: 10px;
+  text-align: right;
+}
