@@ -5,5 +5,8 @@ module.exports = {
     partials: 'views/partials',
     public: 'public',
     views: 'views',
+  },
+  api: {
+    hostname: 'http://localhost:8000'
   }
 };

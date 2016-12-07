@@ -1,7 +1,7 @@
 <div id="body">
   <div class="container">
     <div class="jumbotron">
-      <h1>Checking</h1>
+      <h1>{{ name }}</h1>
       <table class="budget-table">
         <thead>
           <tr>
@@ -10,16 +10,18 @@
           </tr>
         </thead>
         <tbody>
+          {{#each lineItems}}
           <tr>
-            <th class="data-cell">Current Balance</th>
-            <th class="data-cell">$1000.00</th>
+            <th class="data-cell">{{ this.name }}</th>
+            <th class="data-cell currency-cell">{{ this.formattedValue }}</th>
             <th class="edit-cell"><a>Edit</a></th>
           </tr>
+          {{/each}}
         </tbody>
         <tfoot>
           <tr>
             <th class="total-label">Total</th>
-            <th class="total-value">$1000.00</th>
+            <th class="total-value currency-cell">{{ total }}</th>
           </tr>
         </tfoot>
       </table>

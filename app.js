@@ -1,9 +1,11 @@
 var express = require('express');
 var handlebars = require('express-handlebars');
 var path = require('path');
+var request = require('request-promise');
 var config = require('./config');
 var handlebarsHelpers = require('./lib/handlebarsHelpers');
 var middleware = require('./routes/middleware');
+var utils = require('./lib/utils');
 
 var app = express();
 
@@ -38,9 +40,21 @@ app.get('/budgets', function(req, res) {
 app.get('/budget/:id', function(req, res) {
   var budgetId = req.params.id;
   // Get budget info by id from REST service
-  var data = {};
-  res.locals.currentTab = 'budget';
-  res.render('budget', data);
+  var requestUrl = `${config.api.hostname}/budget/${budgetId}`;
+  request(requestUrl)
+      .then((response) => {
+          var data = JSON.parse(response);
+          data.total = utils.currencyFormat(utils.arraySum(data.lineItems.map( (x) => x.amount * x.type )));
+          data.lineItems.forEach((x) => {
+              x.formattedValue = utils.currencyFormat(x.amount * x.type);
+          });
+          res.locals.currentTab = 'budget';
+          res.render('budget', data);
+      })
+      .catch((error) => {
+          console.error(error);
+          res.send('ERROR: 404 Not Found')
+      });
 });
 
 app.get('/profile', function(req, res) {
