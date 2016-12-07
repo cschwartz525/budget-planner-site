@@ -57,6 +57,10 @@ app.get('/budget/:id', function(req, res) {
       });
 });
 
+app.get('/budget/:id/add', function(req, res) {
+  
+});
+
 app.get('/profile', function(req, res) {
   res.locals.currentTab = 'profile';
   res.render('profile', {});
