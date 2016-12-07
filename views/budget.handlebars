@@ -1,30 +1,30 @@
 <div id="body">
-  <div class="container">
-    <div class="jumbotron">
-      <h1>{{ name }}</h1>
-      <table class="budget-table">
-        <thead>
-          <tr>
-            <th class="header-cell">Item</th>
-            <th class="header-cell">Amount</th>
-          </tr>
-        </thead>
-        <tbody>
-          {{#each lineItems}}
-          <tr>
-            <th class="data-cell">{{ this.name }}</th>
-            <th class="data-cell currency-cell">{{ this.formattedValue }}</th>
-            <th class="edit-cell"><a>Edit</a></th>
-          </tr>
-          {{/each}}
-        </tbody>
-        <tfoot>
-          <tr>
-            <th class="total-label">Total</th>
-            <th class="total-value currency-cell">{{ total }}</th>
-          </tr>
-        </tfoot>
-      </table>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>{{ name }}</h1>
+            <table class="budget-table">
+                <thead>
+                    <tr>
+                        <th class="header-cell">Item</th>
+                        <th class="header-cell">Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each lineItems}}
+                        <tr>
+                            <th class="data-cell">{{ this.name }}</th>
+                            <th class="data-cell currency-cell">{{ this.formattedValue }}</th>
+                            <th class="edit-cell"><a>Edit</a></th>
+                        </tr>
+                    {{/each}}
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th class="total-label">Total</th>
+                        <th class="total-value currency-cell">{{ total }}</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
     </div>
-  </div>
 </div>

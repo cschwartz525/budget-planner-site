@@ -1,6 +1,6 @@
-module.exports = function (req, res) {
-	var locals = res.locals;
+module.exports = function(req, res) {
+    var locals = res.locals;
 
-	// Render the view
-	res.render('index', locals);
+    // Render the view
+    res.render('index', locals);
 };
