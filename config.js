@@ -8,5 +8,9 @@ module.exports = {
     },
     api: {
         hostname: 'http://localhost:8000'
+    },
+    facebook: {
+        clientId: process.env.FACEBOOK_ID,
+        clientSecret: process.env.FACEBOOK_SECRET
     }
 };
