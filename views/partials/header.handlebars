@@ -19,11 +19,14 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         {{#if loggedIn}}
-                        <li>
-                            <a class="navbar-user-picture" href="#">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle navbar-user-picture" data-toggle="dropdown" href="#">
                                 <span>{{ userFullName }}</span>
                                 <img src="{{ profilePicture }}" />
                             </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/logout">Logout</a></li>
+                            </ul>
                         </li>
                         {{else}}
                         <li><a href="/login/facebook">Sign In</a></li>
