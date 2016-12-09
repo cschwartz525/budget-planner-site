@@ -9,6 +9,7 @@
   "author": "Craig Schwartz <craigschwartz525@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
     "express-handlebars": "^3.0.0",
     "passport": "^0.3.2",

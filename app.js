@@ -1,3 +1,4 @@
+var cookieParser = require('cookie-parser');
 var express = require('express');
 var handlebars = require('express-handlebars');
 var passport = require('passport');
@@ -26,7 +27,9 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.set('views', path.join(process.env.PWD, config.dir.views));
 
+app.use(cookieParser());
 app.use(middleware.initLocals);
+app.use(middleware.facebookCheck);
 
 app.get('/', routes.index);
 app.get('/budgets', routes.budgets);

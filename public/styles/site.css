@@ -6714,6 +6714,16 @@ button.close {
 body {
   font-family: 'Rubik', Helvetica, Arial, sans-serif;
 }
+#header .navbar-user-picture {
+  padding: 0px;
+}
+#header .navbar-user-picture span {
+  padding: 0 10px;
+}
+#header .navbar-user-picture img {
+  height: 50px;
+  width: 50px;
+}
 #footer {
   border-top: 1px solid #eeeeee;
   color: #777777;

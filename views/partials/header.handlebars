@@ -18,7 +18,16 @@
                             {{/each}}
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
+                        {{#if loggedIn}}
+                        <li>
+                            <a class="navbar-user-picture" href="#">
+                                <span>{{ userFullName }}</span>
+                                <img src="{{ profilePicture }}" />
+                            </a>
+                        </li>
+                        {{else}}
                         <li><a href="/login/facebook">Sign In</a></li>
+                        {{/if}}
                     </ul>
                 </div>
             </div>
